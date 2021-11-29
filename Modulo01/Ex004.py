@@ -1,0 +1,10 @@
+a = input('Digite algo: ')
+
+print('O tipo da variavel eh: {}'.format(type(a)))
+print('So tem espacos?', a.isspace())
+print('Eh um numero?', a.isnumeric())
+print('Eh alfabetico?', a.isalpha())
+print('Eh Alphanumerico?', a.isalnum())
+print('Eh Maisculo?', a.isupper())
+print('Eh Minusculo?', a.islower())
+print('Eh Capitilizado?', a.istitle())
