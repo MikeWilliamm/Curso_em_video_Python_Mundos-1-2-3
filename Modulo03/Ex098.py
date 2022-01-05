@@ -9,15 +9,21 @@ def contagem(ini, fim, pas):
     print(f'Contagem de {ini} até {fim} de {pas} em {pas}.')
     sleep(2.5)
     if ini < fim:
-        for i in range(ini, fim+1, pas):
-            print(i, end= ' ', flush=True)
-            sleep(0.5)
-        print('FIM!')
+        if ini < fim and  pas <= 0:
+            print(f'Passo invalido!!! \nImpossivel contar de {ini} até {fim} de {pas} em {pas}. \nO passo deve ser positivo.')
+        else: 
+            for i in range(ini, fim+1, pas):
+                print(i, end= ' ', flush=True)
+                sleep(0.5)
+            print('FIM!')
     else:
-        for i in range(ini, fim-1, pas):
-            print(i, end= ' ', flush=True)
-            sleep(0.5)
-        print('FIM!')
+        if ini > fim and  pas >= 0:
+            print(f'Passo invalido!!! \nImpossivel contar de {ini} até {fim} de {pas} em {pas}. \nO passo deve ser negativo.')
+        else:
+            for i in range(ini, fim-1, pas):
+                print(i, end= ' ', flush=True)
+                sleep(0.5)
+            print('FIM!')
 
 
 contagem(1,10,1)
