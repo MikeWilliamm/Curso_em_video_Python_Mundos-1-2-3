@@ -18,7 +18,7 @@ def leiareal():
     while True:
         try:
             real = float(input('Digite um Real: '))
-        except ValueError:
+        except (ValueError, TypeError):
             print('\033[1;31mERRO: Por favor, digite um número real valido!\033[m')
         except KeyboardInterrupt:
             print('O usuario preferiu não digitar esse numero\nNumero Real = 0')

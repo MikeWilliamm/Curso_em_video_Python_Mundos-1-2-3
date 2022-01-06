@@ -10,10 +10,10 @@ except ZeroDivisionError as erro:
     print(f'ERRO de divisão: {erro}')
     print('Impossivel dividar valor por 0')
 except KeyboardInterrupt:
-    print('O usuario preferiu não informar os dados!')
+    print('\nO usuario preferiu não informar os dados!')
 except Exception as erro:
     print(f'ERRO GENÉRICO: {erro}')
 else: #Só entrara no else se o 'try' der certo.
     print(f'{a}/{b} = {r:.2f}')
-finally:
+finally: #Irá executar dando certo o 'try' ou não.
     print('Volte sempre! Muito obrigado!')
